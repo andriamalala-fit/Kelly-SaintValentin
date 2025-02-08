@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelly, will you Be My Valentine?</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #ffe6e6;
+            color: #d6336c;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-top: 50px;
+        }
+        p {
+            font-size: 1.2em;
+        }
+        .heart {
+            font-size: 50px;
+            animation: heartbeat 1s infinite;
+        }
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        .buttons {
+            margin-top: 30px;
+        }
+        button {
+            font-size: 1.5em;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .yes {
+            background-color: #ff4d6d;
+            color: white;
+        }
+        .no {
+            background-color: #ccc;
+            color: black;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Kelly, will you be my Valentine? ❤️</h1>
+    <p>You are my favorite person in the world, mon amour et ma meilleure amie. So, will you be my Valentine?</p>
+    <div class="heart">💖</div>
+
+    <div class="buttons">
+        <button class="yes" onclick="yes()">Yes!😍</button>
+        <button class="no" id="noButton" onmouseover="moveButton()">No 😢</button>
+    </div>
+
+    <script>
+        function yes() {
+            alert("Oueeeee! I love youuuu! ❤️😍💕");
+            document.body.innerHTML = "<h1>Happy Happy Happyyy! 😍😍🥺❤️</h1><p>Can't wait for our special day together! And can't wait to see you monday night, I miss you </p><div class='heart'>💖💖💖</div>";
+        }
+
+        function moveButton() {
+            var btn = document.getElementById("noButton");
+            var x = Math.random() * (window.innerWidth - 100);
+            var y = Math.random() * (window.innerHeight - 50);
+            btn.style.left = x + "px";
+            btn.style.top = y + "px";
+        }
+    </script>
+
+</body>
+</html>
